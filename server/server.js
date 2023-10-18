@@ -5,7 +5,7 @@ import bodyParser from "body-parser";
 import * as path from "path";
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 app.use(express.static("../client/dist"))
 app.use(bodyParser.json());
 
