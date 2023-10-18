@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function addTask({onAddTask}){
+export default  function AddTask({onAddTask}){
     const [newTask, setNewTask] = useState('');
 
     const handleInputChange = (e) => {

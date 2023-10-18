@@ -1,6 +1,6 @@
 import React from "react";
 
-function TaskList ({tasks}){
+export default function TaskList ({tasks}){
     return(
         <div>
             <h2>Liste over oppgaver</h2>
