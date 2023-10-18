@@ -1,31 +1,11 @@
-// TaskListComponent.tsx
+// src/index.tsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App'; // Assuming you have a main App component
 
-import ReactDOM from "react-dom/client";
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-import React, { useEffect, useState } from 'react';
-
-const TaskListComponent: React.FC = () => {
-    const [tasks, setTasks] = useState<string[]>([]);
-
-    useEffect(() => {
-        // Fetch tasks from the backend API
-        fetch('/api/tasks')
-            .then((response) => response.json())
-            .then((data) => setTasks(data));
-    }, []);
-
-    return (
-        <div>
-            <h2>Task List</h2>
-            <ul>
-                {tasks.map((task, index) => (
-                    <li key={index}>{task}</li>
-                ))}
-            </ul>
-        </div>
-    );
-};
-
-export default TaskListComponent;
+ReactDOM.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+);
