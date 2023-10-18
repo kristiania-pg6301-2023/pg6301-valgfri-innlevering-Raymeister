@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98c4d4fa-ed8f-469e-91e7-4d26d138f5fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/TaskList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/addTask.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/CreateTaskComponent.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/TaskListComponent.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697636029363</updated>
       <workItem from="1697636030144" duration="2058000" />
-      <workItem from="1697638133187" duration="5560000" />
+      <workItem from="1697638133187" duration="8959000" />
     </task>
     <servers />
   </component>

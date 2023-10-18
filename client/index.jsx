@@ -1,17 +1,40 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React, {useEffect, useState} from "react";
+import ReactDOM from "react-dom";
+import AddTask from "./AddTask";
+import TaskList from "./TaskList";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Application />);
+function App() {
+    const [tasks, setTasks] = useState([]);
+    useEffect(() => {
+        fetchTasks()
+    }, [])
 
-function Application() {
-    const [counter, setCounter] = useState(0);
-    return <>
-        <h2>Welcome to my application</h2>
-        <div>
-            <button onClick={() => setCounter(oldValue => oldValue + 1)}>Click me</button>
+    const fetchTasks = async() =>{
+        try {
+            const response = await axios.get("https://localhost:3001/tasks");
+            setTasks(response.data);
+        }catch(error){
+            console.error("klarte ikke å få tasks:", error);
+        }
+    }
+
+    const addTask = async (newTask) => {
+        try {
+            await axios.post("http://localhost:3001/tasks", { task: newTask });
+            fetchTasks(); // Refetch tasks after adding a new one
+        } catch (error) {
+            console.error("Error adding task:", error);
+        }
+    };
+
+    return (
+        <div className="Index">
+            <AddTask onAddTask={addTask} />
+            <TaskList tasks={tasks} />
         </div>
-        <div>You have clicked {counter} times</div>
-    </>;
+    );
 }
+
+root.render(<App />);
