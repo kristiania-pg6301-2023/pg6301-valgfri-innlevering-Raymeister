@@ -1,8 +1,12 @@
 
-import React, { useState } from 'react';
+
+import React, {useState} from 'react';
 import AddTask from "./addTask";
 import TaskList from "./TaskList";
 import ReactDOM from "react-dom/client";
+import "./application.css";
+import {Link} from "react-router-dom";
+
 const root = ReactDOM.createRoot(document.getElementById("root"))
 
 function App() {
@@ -15,12 +19,22 @@ function App() {
     };
 
     return (
-        <div className="App">
+        <div>
+            <header>
+                <h1>her er en overskrift</h1>
+            </header>
+                <nav>
 
-            <AddTask onAddTask={addTask} />
-            <TaskList tasks={tasks} />
+                </nav>
+
+            <main>
+                <div className="App">
+                    <AddTask onAddTask={addTask}/>
+                    <TaskList tasks={tasks}/>
+                </div>
+            </main>
         </div>
     );
 }
-root.render(<App></App>)
+root.render(<App/>)
 export default App;
