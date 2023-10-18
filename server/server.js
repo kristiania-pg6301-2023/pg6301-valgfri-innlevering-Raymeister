@@ -11,7 +11,9 @@ app.use(bodyParser.json());
 
 let tasks = [];
 
-
+app.use((req, res, next) =>{
+    res.sendfile(path.resolve("../client/dist/index.html"))
+})
 app.get("/api/tasks", (req, res) => {
     res.json(tasks);
 });
