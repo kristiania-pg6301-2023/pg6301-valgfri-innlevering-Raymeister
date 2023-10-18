@@ -12,11 +12,11 @@ app.use(bodyParser.json());
 let tasks = [];
 
 
-app.get("/tasks", (req, res) => {
+app.get("/api/tasks", (req, res) => {
     res.json(tasks);
 });
 
-app.post("/tasks", (req, res) => {
+app.post("/api/tasks", (req, res) => {
     const newTask = req.body.task;
     console.log(newTask)
     tasks.push(newTask);

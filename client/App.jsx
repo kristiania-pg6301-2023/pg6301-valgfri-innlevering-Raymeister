@@ -6,6 +6,8 @@ import ReactDOM from "react-dom/client";
 const root = ReactDOM.createRoot(document.getElementById("root"))
 
 function App() {
+
+
     const [tasks, setTasks] = useState([]);
 
     const addTask = (newTask) => {
